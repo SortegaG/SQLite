@@ -69,4 +69,4 @@ CREATE TABLE claustro (
   CONSTRAINT fk_vertical_claustro FOREIGN KEY (vertical_id) REFERENCES vertical(vertical_id),
   CONSTRAINT fk_promocion_claustro FOREIGN KEY (promocion_id) REFERENCES promocion(promocion_id),
   CONSTRAINT fk_campus_claustro FOREIGN KEY (campus_id) REFERENCES campus(campus_id),
-  CONSTRAINT fk_modalidad_claustro FOREIGN KEY (modalidad_id) REFERENCES modalidad(modalidad_id)
+  CONSTRAINT fk_modalidad_claustro FOREIGN KEY (modalidad_id) REFERENCES modalidad(modalidad_id));
