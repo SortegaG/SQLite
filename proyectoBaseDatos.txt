@@ -13,3 +13,4 @@ tener cuidao con la normalizacion de los datos
 pandas.dataframe.to_sql (comprueba las queris sin tener que hacerlas)
 
 tener en cuenta valores introducidos vacio
+
