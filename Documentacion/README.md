@@ -13,14 +13,14 @@ Este proyecto consiste en el diseño e implementación de una base de datos rela
 
 Se ha diseñado un diagrama entidad-relación (ERD) para modelar la estructura de la base de datos, donde se representan las tablas, las claves primarias (PK) y las claves foráneas (FK) que permiten las relaciones entre las diferentes entidades.
 
-A continuación se presenta el diagrama ERD utilizado en el proyecto:
+A continuación se presenta el diagrama ERD generado por el software ***pgAdmin4*** utilizado en el proyecto:
 
 <p align="center">
   <img src="../Imagenes/pg4admin_erd_captura.png" alt="img_1"/>
 </p>
 
 
-Aqui se presenta el Diagrama lógico generado por el software ***pgAdmin4***: 
+Aqui se presenta el Diagrama lógico: 
 
 <p align="center">
   <img src="../Diagramas/diagrama_ER.drawio.png" alt="img_1"/>
