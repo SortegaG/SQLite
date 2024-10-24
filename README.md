@@ -1,5 +1,10 @@
 # 🎓 Proyecto de Base de Datos SQL
 
+<p align="center">
+  <img src="img/Picture1.jpg" alt="img_1"/>
+</p>
+
+
 ## 📋 Descripción
 
 Este proyecto consiste en el diseño e implementación de una base de datos relacional utilizando **SQL**. El propósito de esta base de datos es gestionar la información de **estudiantes**, **promociones**, **modalidades**, **campus**, **verticales**, **docentes (claustro)** y **proyectos** en una plataforma educativa. Cada entidad está interrelacionada para ofrecer una visión integral de los elementos clave en la organización académica.
@@ -101,3 +106,6 @@ Este proyecto ha sido desarrollado por los siguientes alumnos de **THE BRIDGE**:
 - Rubén Castro
 - Sergio Ortega
 
+<p align="center">
+  <img src="img/Picture2.png" alt="img_2"/>
+</p>
