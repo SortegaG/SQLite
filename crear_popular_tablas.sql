@@ -23,7 +23,7 @@ CREATE TABLE promocion (
 
 CREATE TABLE vertical (
   vertical_id SERIAL NOT NULL PRIMARY KEY, 
-  vertical_name VARCHAR(45) NOT NULL
+  vertical_nombre VARCHAR(45) NOT NULL
 );
 
 CREATE TABLE modalidad (
@@ -106,7 +106,7 @@ INSERT INTO promocion (promocion_nombre, fecha_comienzo) VALUES
 ('septiembre', '2023-09-18'),
 ('febrero', '2024-02-12');
 
-INSERT INTO vertical (vertical_name) VALUES
+INSERT INTO vertical (vertical_nombre) VALUES
 ('fullstack_developer'),
 ('data_science');
 
