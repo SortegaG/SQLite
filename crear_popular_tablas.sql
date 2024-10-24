@@ -98,45 +98,50 @@ CREATE TABLE estudiante_proyectos (
 
 --populando tablas 
 
-
 INSERT INTO campus (campus_nombre) VALUES
-('Madrid'),
-('Valencia');
+('madrid'),
+('valencia');
 
 INSERT INTO promocion (promocion_nombre, fecha_comienzo) VALUES
-('Septiembre', '2023-09-18'),
-('Febrero', '2024-02-12');
+('septiembre', '2023-09-18'),
+('febrero', '2024-02-12');
 
 INSERT INTO vertical (vertical_name) VALUES
-('Fullstack Developer'),
-('Data Science');
+('fullstack_developer'),
+('data_science');
 
 INSERT INTO modalidad (tipo_modalidad) VALUES
-('Presencial'),
-('Online');
+('presencial'),
+('online');
 
 INSERT INTO claustro (nombre_docente, apellido_docente, vertical_id, promocion_id, campus_id, modalidad_id) VALUES
-('Noa', 'Yáñez', 2, 1, 1, 1),  -- TA, DS, Septiembre, Madrid, Presencial
-('Saturnina', 'Benitez', 2, 1, 1, 1),  -- TA, DS, Septiembre, Madrid, Presencial
-('Anna', 'Feliu', 1, 1, 1, 1),  -- TA, FS, Septiembre, Madrid, Presencial
-('Rosalva', 'Ayuso', 1, 1, 2, 1),  -- TA, FS, Septiembre, Valencia, Presencial
-('Ana Sofía', 'Ferrer', 1, 2, 2, 1),  -- TA, FS, Febrero, Valencia, Presencial
-('Angélica', 'Corral', 1, 2, 1, 1),  -- TA, FS, Febrero, Madrid, Presencial
-('Ariel', 'Lledó', 2, 1, 1, 1),  -- TA, DS, Septiembre, Madrid, Presencial
-('Mario', 'Prats', 1, 2, 2, 2),  -- LI, FS, Febrero, Valencia, Online
-('Luis Ángel', 'Suárez', 1, 1, 1, 2),  -- LI, FS, Septiembre, Madrid, Online
-('María Dolores', 'Diaz', 2, 1, 1, 2);  -- LI, DS, Septiembre, Madrid, Online
+('noa', 'yanez', 2, 1, 1, 1),  -- ta, ds, septiembre, madrid, presencial
+('saturnina', 'benitez', 2, 1, 1, 1),  -- ta, ds, septiembre, madrid, presencial
+('anna', 'feliu', 1, 1, 1, 1),  -- ta, fs, septiembre, madrid, presencial
+('rosalva', 'ayuso', 1, 1, 2, 1),  -- ta, fs, septiembre, valencia, presencial
+('ana sofía', 'ferrer', 1, 2, 2, 1),  -- ta, fs, febrero, valencia, presencial
+('angelica', 'corral', 1, 2, 1, 1),  -- TA, FS, Febrero, Madrid, Presencial
+('ariel', 'lledo', 2, 1, 1, 1),  -- TA, DS, Septiembre, Madrid, Presencial
+('mario', 'prats', 1, 2, 2, 2),  -- LI, FS, Febrero, Valencia, Online
+('luis angel', 'suarez', 1, 1, 1, 2),  -- LI, FS, Septiembre, Madrid, Online
+('maria dolores', 'diaz', 2, 1, 1, 2),  -- LI, DS, Septiembre, Madrid, Online
+('juan', 'gomez', 2, 1, 1, 1), -- LI, DS, Septiembre, Madrid, presencial
+('miguel', 'castro', 2, 2, 1, 1), -- LI, DS, febrero, Madrid, presencial
+('alfonso', 'ramirez', 2, 2, 1, 1); -- ta, DS, febrero, Madrid, presencial
 
 INSERT INTO teaching_assistant (docente_id) VALUES
-(1),  -- Noa Yáñez
-(2),  -- Saturnina Benitez
-(3),  -- Anna Feliu
-(4),  -- Rosalva Ayuso
-(5),  -- Ana Sofía Ferrer
-(6),  -- Angélica Corral
-(7);  -- Ariel Lledó
+(1),  -- noa yanez
+(2),  -- saturnina benitez
+(3),  -- anna feliu
+(4),  -- rosalva ayuso
+(5),  -- ana sofía ferrer
+(6),  -- angelica corral
+(7),  -- ariel lledo
+(8); -- alfonso ramirez
 
 INSERT INTO lead_instructor (docente_id) VALUES
-(8),  -- Mario Prats
-(9),  -- Luis Ángel Suárez
-(10); -- María Dolores Diaz
+(8),  -- mario prats
+(9),  -- luis angel suarez
+(10), -- maría dolores diaz
+(11), -- juan gomez
+(12); -- miguel castro
