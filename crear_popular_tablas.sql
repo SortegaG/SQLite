@@ -1,4 +1,3 @@
--- Eliminar tablas en el orden correcto
 DROP TABLE IF EXISTS estudiante_proyectos CASCADE;
 DROP TABLE IF EXISTS claustro CASCADE;
 DROP TABLE IF EXISTS proyectos CASCADE;
@@ -9,6 +8,8 @@ DROP TABLE IF EXISTS promocion CASCADE;
 DROP TABLE IF EXISTS campus CASCADE;
 DROP TABLE IF EXISTS lead_instructor CASCADE;
 DROP TABLE IF EXISTS teaching_assistant CASCADE;
+
+--creando tablas
 
 CREATE TABLE campus (
   campus_id SERIAL NOT NULL PRIMARY KEY, 
@@ -56,7 +57,7 @@ CREATE TABLE lead_instructor (
 CREATE TABLE teaching_assistant (
   teaching_assistant_id SERIAL NOT NULL PRIMARY KEY, 
   docente_id INTEGER NOT NULL,
-  FOREIGN KEY (docente_id) REFERENCES claustro(docente_id)  -- Renamed constraint here
+  FOREIGN KEY (docente_id) REFERENCES claustro(docente_id)  
 );
 
 CREATE TABLE alumnos (
