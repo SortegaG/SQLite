@@ -1,5 +1,4 @@
 -- Eliminar tablas en el orden correcto
-DROP TABLE IF EXISTS calificacion CASCADE;
 DROP TABLE IF EXISTS claustro CASCADE;
 DROP TABLE IF EXISTS proyectos CASCADE;
 DROP TABLE IF EXISTS alumnos CASCADE;
@@ -8,6 +7,7 @@ DROP TABLE IF EXISTS vertical CASCADE;
 DROP TABLE IF EXISTS promocion CASCADE;
 DROP TABLE IF EXISTS campus CASCADE;
 
+
 CREATE TABLE campus (
   campus_id SERIAL NOT NULL PRIMARY KEY, 
   campus_nombre VARCHAR(45) NOT NULL
@@ -15,7 +15,8 @@ CREATE TABLE campus (
 
 CREATE TABLE promocion (
   promocion_id SERIAL NOT NULL PRIMARY KEY,
-  promocion_nombre VARCHAR(45) NOT NULL
+  promocion_nombre VARCHAR(45) NOT NULL,
+  fecha_comienzo date NOT NULL
 );
 
 CREATE TABLE vertical (
@@ -25,8 +26,7 @@ CREATE TABLE vertical (
 
 CREATE TABLE modalidad (
   modalidad_id SERIAL NOT NULL PRIMARY KEY, 
-  mes VARCHAR(45) NOT NULL, 
-  fecha DATE NOT NULL
+  tipo_modalidad VARCHAR(45) NOT NULL
 );
 
 CREATE TABLE alumnos (
@@ -38,14 +38,15 @@ CREATE TABLE alumnos (
   promocion_id INTEGER NOT NULL,
   modalidad_id INTEGER NOT NULL,
   vertical_id INTEGER NOT NULL,
-  CONSTRAINT fk_campus FOREIGN KEY (campus_id) REFERENCES campus(campus_id),
-  CONSTRAINT fk_promocion FOREIGN KEY (promocion_id) REFERENCES promocion(promocion_id),
-  CONSTRAINT fk_modalidad FOREIGN KEY (modalidad_id) REFERENCES modalidad(modalidad_id),
-  CONSTRAINT fk_vertical FOREIGN KEY (vertical_id) REFERENCES vertical(vertical_id)
+  lead_instructor_id INTEGER NOT NULL,
+  teaching_assistant_id INTEGER NOT NULL,
+  CONSTRAINT fk_campus_alumnos FOREIGN KEY (campus_id) REFERENCES campus(campus_id),
+  CONSTRAINT fk_promocion_alumnos FOREIGN KEY (promocion_id) REFERENCES promocion(promocion_id),
+  CONSTRAINT fk_modalidad_alumnos FOREIGN KEY (modalidad_id) REFERENCES modalidad(modalidad_id),
+  CONSTRAINT fk_vertical_alumnos FOREIGN KEY (vertical_id) REFERENCES vertical(vertical_id),
+  CONSTRAINT fk_lead_instructor_alumnos FOREIGN KEY (lead_instructor_id) REFERENCES lead_instructor(lead_instructor_id),
+  CONSTRAINT fk_teaching_assistant_alumnos FOREIGN KEY (teaching_assistant_id) REFERENCES teaching_assistant(teaching_assistant_id)
 );
-
--- Drop the proyectos table if it exists
-DROP TABLE IF EXISTS proyectos;
 
 -- Create the proyectos table with the added columns
 CREATE TABLE proyectos (
@@ -54,16 +55,16 @@ CREATE TABLE proyectos (
   vertical_id INTEGER NOT NULL,
   alumno_id INTEGER NOT NULL,
   calificacion VARCHAR(45) NOT NULL,
-  fecha_inicio DATE NOT NULL,            -- New column
-  fecha_entrega DATE NOT NULL,           -- New column
-  estado VARCHAR(20) DEFAULT 'en progreso',  -- New column with default value
+  promocion_id INTEGER NOT NULL,
   CONSTRAINT fk_vertical_proyectos FOREIGN KEY (vertical_id) REFERENCES vertical(vertical_id),
-  CONSTRAINT fk_alumno_id FOREIGN KEY (alumno_id) REFERENCES alumnos(id_alumno)
+  CONSTRAINT fk_alumno_proyectos FOREIGN KEY (alumno_id) REFERENCES alumnos(id_alumno),
+  CONSTRAINT fk_promocion_proyectos FOREIGN KEY (promocion_id) REFERENCES promocion(promocion_id)
 );
 
 CREATE TABLE claustro (
-  claustro_id SERIAL NOT NULL PRIMARY KEY, 
-  claustro_name VARCHAR(45) NOT NULL, 
+  docente_id SERIAL NOT NULL PRIMARY KEY, 
+  nombre_docente VARCHAR(45) NOT NULL,
+  apellido_docente VARCHAR(45) NOT NULL,
   vertical_id INTEGER NOT NULL, 
   promocion_id INTEGER NOT NULL,
   campus_id INTEGER NOT NULL,
@@ -72,4 +73,16 @@ CREATE TABLE claustro (
   CONSTRAINT fk_promocion_claustro FOREIGN KEY (promocion_id) REFERENCES promocion(promocion_id),
   CONSTRAINT fk_campus_claustro FOREIGN KEY (campus_id) REFERENCES campus(campus_id),
   CONSTRAINT fk_modalidad_claustro FOREIGN KEY (modalidad_id) REFERENCES modalidad(modalidad_id)
+);
+
+CREATE TABLE lead_instructor (
+  lead_instructor_id SERIAL NOT NULL PRIMARY KEY, 
+  docente_id INTEGER NOT NULL,
+  CONSTRAINT fk_docente_lead_instructor FOREIGN KEY (docente_id) REFERENCES claustro(docente_id)
+);
+
+CREATE TABLE teaching_assistant (
+  teaching_assistant_id SERIAL NOT NULL PRIMARY KEY, 
+  docente_id INTEGER NOT NULL,
+  CONSTRAINT fk_docente_lead_instructor FOREIGN KEY (docente_id) REFERENCES claustro(docente_id)
 );
