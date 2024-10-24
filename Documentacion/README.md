@@ -9,11 +9,22 @@
 
 Este proyecto consiste en el diseño e implementación de una base de datos relacional utilizando **SQL**. El propósito de esta base de datos es gestionar la información de **estudiantes**, **promociones**, **modalidades**, **campus**, **verticales**, **docentes (claustro)** y **proyectos** en una plataforma educativa. Cada entidad está interrelacionada para ofrecer una visión integral de los elementos clave en la organización académica.
 
-## 📐 Diagrama Entidad-Relación (ER)
+## 📐 Diagrama Entidad-Relación (ERD)
 
-Se ha diseñado un diagrama entidad-relación (ER) para modelar la estructura de la base de datos, donde se representan las tablas, las claves primarias (PK) y las claves foráneas (FK) que permiten las relaciones entre las diferentes entidades.
+Se ha diseñado un diagrama entidad-relación (ERD) para modelar la estructura de la base de datos, donde se representan las tablas, las claves primarias (PK) y las claves foráneas (FK) que permiten las relaciones entre las diferentes entidades.
 
-A continuación se presenta el diagrama ER utilizado en el proyecto:
+A continuación se presenta el diagrama ERD utilizado en el proyecto:
+
+<p align="center">
+  <img src="../Imagenes/pg4admin_erd_captura.png" alt="img_1"/>
+</p>
+
+
+Aqui se presenta el Diagrama lógico generado por el software ***pgAdmin4***: 
+
+<p align="center">
+  <img src="../Diagramas/diagrama_ER.drawio.png" alt="img_1"/>
+</p>
 
 ## 🗃️ Estructura de la Base de Datos
 
@@ -26,6 +37,9 @@ Las principales tablas y sus relaciones son:
 - **Verticales**: Categorías o áreas de conocimiento.
 - **Claustro (Docentes)**: Información de los docentes encargados de los cursos.
 - **Proyectos**: Proyectos realizados por los estudiantes en sus respectivas verticales.
+- **Lead_instructors**: Profesores que lideran los bootcamps.
+- **Teacher assistant**: Antiguos alumnos convertidos en colaboradores de los profesores.
+- **Estudiantes_proyectos**: Incluye la calificación de cada alumno por proyecto.
 
 ### 📑 Detalle de las Tablas
 
@@ -70,10 +84,24 @@ Las principales tablas y sus relaciones son:
 7. **Proyectos**
    - `ID_proyecto` (PK)
    - `nombre_proyecto`
-   - `calificacion`
    - `FK_ID_estudiante`
    - `FK_ID_promocion`
    - `FK_ID_vertical`
+
+8. **Proyectos**
+   - `ID_proyecto` (PK)
+   - `nombre_proyecto`
+   - `FK_ID_estudiante`
+   - `FK_ID_promocion`
+   - `FK_ID_vertical`
+
+9. **Lead_instructors**
+   - `ID_lead_instructor` (PK)
+   - `FK_docente_id`
+
+10. **Teacher_assistants**
+   - `ID_teacher_assistant` (PK)
+   - `FK_docente_id`
 
 ## 🛠️ Instalación
 

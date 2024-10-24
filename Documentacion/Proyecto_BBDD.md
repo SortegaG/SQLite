@@ -26,7 +26,7 @@ Los datos de entrada tienen la siguiente estructura:
 
 3. **Normalización de Datos**: Analizar los datos y realizar una normalización adecuada para eliminar la redundancia y garantizar la integridad de los datos.
 
-4. **Creación de la Base de Datos**: Utilizando un sistema de gestión de bases de datos de PostgreSQL, crar la base de datos y las tablas necesarias según el modelo lógico. Crear las queries necesarias para crear las tablas e ingestar los datos. Habrá que alojar en algún servidor vuestras bases de datos para poder acceder desde aplicaciones de terceros.
+4. **Creación de la Base de Datos**: Utilizando un sistema de gestión de bases de datos de PostgreSQL, crear la base de datos y las tablas necesarias según el modelo lógico. Crear las queries necesarias para crear las tablas e ingestar los datos. Habrá que alojar en algún servidor vuestras bases de datos para poder acceder desde aplicaciones de terceros.
 Algunos servicios gratis de postgreSQL:
 
 - [ElephantSQL](https://www.elephantsql.com/)
@@ -42,6 +42,4 @@ Se deberá de tener en cuenta la escalabilidad de la base de datos. Es decir, ti
 - Scripts SQL o comandos utilizados para crear la base de datos y las tablas.
 - Base de datos funcional con los datos importados y consumibles con queries de consulta.
 
-
-**Fecha entrega** : Viernes 25 de Marzo a las 9.00. Se realizará una presentación técnica (formato libre) por grupo del resultado final. Se deberá mostrar la base de datos ingestada según la solución propuesta y una serie de queries de consulta como demo de funcionamiento de la base de datos.
 
