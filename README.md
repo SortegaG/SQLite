@@ -103,6 +103,3 @@ Este proyecto ha sido desarrollado por los siguientes alumnos de **THE BRIDGE**:
 - Rubén Castro
 - Sergio Ortega
 
-## 📜 Licencia
-Este proyecto está licenciado bajo los términos de [MIT License](https://opensource.org/licenses/MIT).
-
