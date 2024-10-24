@@ -86,3 +86,48 @@ CREATE TABLE teaching_assistant (
   docente_id INTEGER NOT NULL,
   CONSTRAINT fk_docente_lead_instructor FOREIGN KEY (docente_id) REFERENCES claustro(docente_id)
 );
+
+--populando tablas 
+
+
+INSERT INTO campus (campus_nombre) VALUES
+('Madrid'),
+('Valencia');
+
+INSERT INTO promocion (promocion_nombre, fecha_comienzo) VALUES
+('Septiembre', '2023-09-18'),
+('Febrero', '2024-02-12');
+
+INSERT INTO vertical (vertical_name) VALUES
+('Fullstack Developer'),
+('Data Science');
+
+INSERT INTO modalidad (tipo_modalidad) VALUES
+('Presencial'),
+('Online');
+
+INSERT INTO claustro (nombre_docente, apellido_docente, vertical_id, promocion_id, campus_id, modalidad_id) VALUES
+('Noa', 'Yáñez', 2, 1, 1, 1),  -- TA, DS, Septiembre, Madrid, Presencial
+('Saturnina', 'Benitez', 2, 1, 1, 1),  -- TA, DS, Septiembre, Madrid, Presencial
+('Anna', 'Feliu', 1, 1, 1, 1),  -- TA, FS, Septiembre, Madrid, Presencial
+('Rosalva', 'Ayuso', 1, 1, 2, 1),  -- TA, FS, Septiembre, Valencia, Presencial
+('Ana Sofía', 'Ferrer', 1, 2, 2, 1),  -- TA, FS, Febrero, Valencia, Presencial
+('Angélica', 'Corral', 1, 2, 1, 1),  -- TA, FS, Febrero, Madrid, Presencial
+('Ariel', 'Lledó', 2, 1, 1, 1),  -- TA, DS, Septiembre, Madrid, Presencial
+('Mario', 'Prats', 1, 2, 2, 2),  -- LI, FS, Febrero, Valencia, Online
+('Luis Ángel', 'Suárez', 1, 1, 1, 2),  -- LI, FS, Septiembre, Madrid, Online
+('María Dolores', 'Diaz', 2, 1, 1, 2);  -- LI, DS, Septiembre, Madrid, Online
+
+INSERT INTO teaching_assistant (docente_id) VALUES
+(1),  -- Noa Yáñez
+(2),  -- Saturnina Benitez
+(3),  -- Anna Feliu
+(4),  -- Rosalva Ayuso
+(5),  -- Ana Sofía Ferrer
+(6),  -- Angélica Corral
+(7);  -- Ariel Lledó
+
+INSERT INTO lead_instructor (docente_id) VALUES
+(8),  -- Mario Prats
+(9),  -- Luis Ángel Suárez
+(10); -- María Dolores Diaz
