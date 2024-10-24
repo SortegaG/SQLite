@@ -10,8 +10,6 @@ Se ha diseñado un diagrama entidad-relación (ER) para modelar la estructura de
 
 A continuación se presenta el diagrama ER utilizado en el proyecto:
 
-![Diagrama ER](ruta-a-tu-diagrama-er.png)
-
 ## 🗃️ Estructura de la Base de Datos
 
 Las principales tablas y sus relaciones son:
