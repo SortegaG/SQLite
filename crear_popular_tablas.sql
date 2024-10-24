@@ -82,7 +82,6 @@ CREATE TABLE proyectos (
   proyecto_id SERIAL NOT NULL PRIMARY KEY, 
   proyecto_nombre VARCHAR(45) NOT NULL, 
   vertical_id INTEGER NOT NULL,
-  calificacion VARCHAR(45) NOT NULL,
   promocion_id INTEGER NOT NULL,
   FOREIGN KEY (vertical_id) REFERENCES vertical(vertical_id),
   FOREIGN KEY (promocion_id) REFERENCES promocion(promocion_id)
