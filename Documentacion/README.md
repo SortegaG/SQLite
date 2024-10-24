@@ -1,7 +1,7 @@
 # 🎓 Proyecto de Base de Datos SQL
 
 <p align="center">
-  <img src="img/Picture1.jpg" alt="img_1"/>
+  <img src="../Imagenes/Picture1.jpg" alt="img_1"/>
 </p>
 
 
@@ -107,5 +107,5 @@ Este proyecto ha sido desarrollado por los siguientes alumnos de **THE BRIDGE**:
 - Sergio Ortega
 
 <p align="center">
-  <img src="img/Picture2.png" alt="img_2"/>
+  <img src="../Imagenes/Picture2.png" alt="img_2"/>
 </p>
