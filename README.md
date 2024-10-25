@@ -16,11 +16,16 @@ Se ha diseñado un diagrama entidad-relación (ERD) para modelar la estructura d
 A continuación se presenta el diagrama ERD generado por el software ***pgAdmin4*** utilizado en el proyecto:
 
 <p align="center">
+  <img src="./Imagenes/pg4admin_erd_captura.png" alt="img_1"/>  
+</p>
+
+Aquí se presenta el Diagrama Relacional: 
+
+<p align="center">
   <img src="./Imagenes/Diagrama_Relacional_page-0001.jpg" alt="img_1"/>  
 </p>
 
-
-Aqui se presenta el Diagrama lógico: 
+Aquí se presenta el Modelo Relacional: 
 
 <p align="center">
   <img src="./Imagenes/Modelo_Relacional_page-0001.jpg" alt="img_1"/>  
