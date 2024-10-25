@@ -1,7 +1,7 @@
 # 🎓 Proyecto de Base de Datos SQL
 
 <p align="center">
-  <img src="../Imagenes/Picture1.jpg" alt="img_1"/>
+  <img src="./Imagenes/Picture1.jpg" alt="img_1"/>
 </p>
 
 
@@ -16,14 +16,14 @@ Se ha diseñado un diagrama entidad-relación (ERD) para modelar la estructura d
 A continuación se presenta el diagrama ERD generado por el software ***pgAdmin4*** utilizado en el proyecto:
 
 <p align="center">
-  <img src="../Imagenes/pg4admin_erd_captura.png" alt="img_1"/>
+  <img src="./Imagenes/pg4admin_erd_captura.png" alt="img_1"/>
 </p>
 
 
 Aqui se presenta el Diagrama lógico: 
 
 <p align="center">
-  <img src="../Diagramas/diagrama_ER.drawio.png" alt="img_1"/>
+  <img src="./Diagramas/diagrama_ER.drawio.png" alt="img_1"/>
 </p>
 
 ## 🗃️ Estructura de la Base de Datos
@@ -135,5 +135,5 @@ Este proyecto ha sido desarrollado por los siguientes alumnos de **THE BRIDGE**:
 - Sergio Ortega
 
 <p align="center">
-  <img src="../Imagenes/Picture2.png" alt="img_2"/>
+  <img src="./Imagenes/Picture2.png" alt="img_2"/>
 </p>
